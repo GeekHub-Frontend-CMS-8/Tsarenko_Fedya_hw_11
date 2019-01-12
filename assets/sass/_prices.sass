@@ -1,0 +1,113 @@
+@import "variables"
+
+@import "mixins"
+
+sup, sub
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sup
+  top: -1.5em
+
+sub
+  bottom: -0.25em
+
+.prices
+  padding: 69px 0 92px
+  text-align: center
+  background-color: #e3e3e3
+
+  &-title
+    color: #3e3d3d
+    font-family: $third-font
+    &:after
+      content: url("../img/black_wavy_line.png")
+      display: block
+      margin-top: 20px
+
+
+  &-main-container
+    +flex-content(space-between)
+    margin-top: 80px
+    flex-wrap: wrap
+    @media (max-width: 1164px)
+      justify-content: center
+
+  &-container
+    padding: 46px 105px 58px
+    background-color: #ffffff
+    @media (max-width: 1164px)
+      padding: 46px 75px 58px
+      margin-bottom: 30px
+      &:nth-child(1n)
+        margin-right: 30px
+    @media (max-width: 730px)
+      flex-basis: 50%
+      &:nth-child(1n)
+        margin-right: 0
+
+  &-level
+    margin-bottom: 26px
+    color: #3e3d3d
+    font:
+      size: 13px
+      family: $second-font
+
+  &-price
+    margin-bottom: 52px
+    color: #3e3d3d
+    font:
+      size: 70px
+      weight: bold
+    sup
+      font-size: 28px
+
+  &-facilities
+    padding-bottom: 18px
+    color: #3e3d3d
+    font:
+      family: $first-font
+      style: italic
+
+  &-button
+    padding: 13px 40px
+    margin-top: 33px
+    border: 2px solid #3e3d3d
+    background-color: transparent
+    transition: 0.3s ease-out
+    color: #3e3d3d
+    font:
+      size: 13px
+      family: $second-font
+    &:hover
+      color: #ffffff
+      transition: 0.3s ease-in
+      background-color: #3e3d3d
+
+@each $icon in (lock, loud, pro)
+  .#{$icon}
+    position: relative
+    padding: 15px
+    margin: 0 auto 35px
+    width: 22px
+    height: 18px
+    border: 2px solid #3e3d3d
+    border-radius: 50%
+    background: url("../img/#{$icon}.png") no-repeat center
+    &:after, &:before
+      content: ''
+      position: absolute
+      bottom: 50%
+      display: block
+      width: 90px
+      height: 1px
+      background-color: #000
+    &:after
+      right: 54px
+    &:before
+      left: 54px
+
+
+

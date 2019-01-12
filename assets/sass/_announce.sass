@@ -1,0 +1,61 @@
+@import "variables"
+
+@import "mixins"
+
+.announce
+  padding: 35px 0 39px
+  background-color: #2d2d2f
+
+  &-container
+    +flex-content(center)
+    align-items: center
+    @media (max-width: 768px)
+      flex-wrap: wrap
+      text-align: center
+
+
+  &-icon
+    margin-right: 43px
+    background: url("../img/compas.png") no-repeat center
+    width: calc(31% - 152px)
+    height: 104px
+    @media (max-width: 768px)
+      margin-bottom: 20px
+      margin-right: 0
+      width: calc(100% - 92px)
+
+  &-title
+    margin-bottom: 20px
+    color: #d8d8d8
+    font:
+      family: $second-font
+      weight: bold
+
+  &-info
+    padding-right: 67px
+    color: #888888
+    font:
+      style: italic
+      family: $first-font
+    @media (max-width: 768px)
+      padding-right: 0
+
+  &-button
+    padding: 14px 33px
+    margin-left: 67px
+    color: #ffffff
+    border: 2px solid #e3e3e3
+    background-color: transparent
+    transition: 0.3s ease-out
+    font:
+      size: 13px
+      family: $second-font
+    &:hover
+      color: #2d2d2f
+      border: 2px solid #2d2d2f
+      background-color: #e3e3e3
+      transition: 0.3s  ease-out
+    @media (max-width: 768px)
+      margin-left: 0
+      margin-top: 30px
+    

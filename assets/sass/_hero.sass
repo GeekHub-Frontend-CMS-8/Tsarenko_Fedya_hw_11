@@ -1,0 +1,107 @@
+@import "variables"
+
+@import "mixins"
+
+.hero
+  position: relative
+  text-align: center
+  padding: 200px 0
+  color: #ffffff
+  background: url("../img/hero-bg.png") no-repeat center/cover
+
+  &-presentation
+    margin-bottom: 23px
+    font:
+      size: 14px
+      family: $first-font
+
+  &-title
+    font:
+      size: 36px
+      family: $third-font
+    @media screen and (max-width: 425px)
+      font-size: 26px
+
+  &-button
+    position: relative
+    padding: 15px 26px
+    margin-top: 188px
+    transition: 0.3s
+    border: 2px solid #f2f2f2
+    font:
+      size: 15px
+      family: $second-font
+    background-color: transparent
+    z-index: 3
+    a
+      color: #ffffff
+    &:hover
+      background-color: #ffffff
+      transition: 0.3s
+    &:hover a
+      color: #000
+      transition: 0.3s
+    &:after
+      content: url("../img/Arrow.png")
+      position: absolute
+      bottom: -48px
+      left: 44%
+
+.title-container
+  padding: 37px
+  margin: 0 auto
+  max-width: 446px
+  background: url("../img/white_wavy_line.png") no-repeat
+  background-size: cover
+
+
+#slides
+  position: relative
+  padding: 0
+  margin: 0
+  list-style-type: none
+
+.slide
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  z-index: 1
+  transition: opacity .5s
+
+.showing
+  opacity: 1
+  z-index: 2
+
+.controls
+  position: absolute
+  top: 45%
+  text-align: center
+  width: 34px
+  height: 34px
+  font-size: 22px
+  color: #3e3d3d
+  background-color: #ffffff
+  border: none
+  border-radius: 50%
+  z-index: 3
+
+.left
+  left: 8%
+  @media screen and (max-width: 768px)
+    left: 0
+
+.right
+  right: 8%
+  @media screen and (max-width: 768px)
+    right: 0
+
+
+
+
+
+
+
+  

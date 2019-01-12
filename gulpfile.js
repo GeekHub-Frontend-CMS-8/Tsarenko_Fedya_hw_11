@@ -16,13 +16,20 @@ gulp.task('img', function () {
 
 });
 
+gulp.task('js', function () {
+    return gulp.src('assets/js/**/*')
+        .pipe(gulp.dest('build/js'))
+        .pipe(browserSync.reload({stream: true}))
+
+});
+
 gulp.task("html", function () {
 	return gulp.src("assets/**/*.html")
 		.pipe(gulp.dest("build"))
 		.pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task("watch", [ 'sass', "html", 'img'], function () {
+gulp.task("watch", [ 'sass', "html", 'img', 'js'], function () {
 	browserSync.init({
 		server: "./build",
 		notify: false,
@@ -33,4 +40,5 @@ gulp.task("watch", [ 'sass', "html", 'img'], function () {
     gulp.watch('assets/sass/**/*.sass', ["sass"]);
     gulp.watch('assets/**/*.html' , ['html']);
 	gulp.watch('assets/img/**/*', ["img"]);
+	gulp.watch('assets/js/**/*', ["js"]);
 });

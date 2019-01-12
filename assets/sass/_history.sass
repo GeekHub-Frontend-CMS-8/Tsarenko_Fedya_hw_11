@@ -1,0 +1,245 @@
+@import "variables"
+
+@import "mixins"
+
+.history
+  position: relative
+  padding: 57px 0 162px
+  text-align: center
+  background-color: #ededed
+
+  &-title
+    color: #3e3d3d
+    font-family: $third-font
+    &:after
+      content: url("../img/black_wavy_line.png")
+      display: block
+      margin-top: 20px
+
+  &-timeline
+    padding-top: 80px
+
+  &-element
+    list-style-type: none
+    position: relative
+    width: 2px
+    margin: 0 auto
+    padding-top: 50px
+    background: #3e3d3d
+    &::after
+      content: ''
+      position: absolute
+      left: 50%
+      top: 25%
+      transform: translateX(-50%)
+      width: 17px
+      height: 17px
+      border-radius: 50%
+      background: inherit
+
+  &-element:nth-child(even):after
+      content: ''
+      position: absolute
+      left: 50%
+      top: -164px
+      transform: translateX(-50%)
+      width: 17px
+      height: 17px
+      border-radius: 50%
+      background: inherit
+
+  &-year
+    position: absolute
+    left: 47%
+    +flex-content(center)
+    align-items: center
+    width: 80px
+    height: 80px
+    border: 2px solid #3e3d3d
+    border-radius: 50%
+    background-color: #ededed
+    z-index: 1
+    &:last-child
+      background-color: #3e3d3d
+
+  &-year:nth-child(3)
+    bottom: 44%
+
+
+  &-caption
+    padding-bottom: 9px
+    text-transform: uppercase
+    font:
+      size: 13px
+      family: $second-font
+
+  &-date
+    padding-bottom: 28px
+    font:
+      size: 11px
+      family: $second-font
+
+  &-paragraph
+    padding-bottom: 13px
+    font:
+      size: 14px
+      family: $first-font
+
+  &-container
+    position: relative
+    bottom: 0
+    width: 400px
+    text-align: left
+    padding: 29px 24px 60px 32px
+    background: transparent
+    border: 2px solid #3e3d3d
+    color: #3e3d3d
+    &:before
+      content: ''
+      position: absolute
+      bottom: 7px
+      width: 0
+      height: 0
+      border-style: solid
+    &:after
+      content: ''
+      position: absolute
+      bottom: 7px
+      width: 0
+      height: 0
+      border-style: solid
+
+
+
+  &-element:nth-child(even) &-container
+    top: -230px
+    left: 30px
+
+  &-element:nth-child(3) &-container
+    top: -267px
+
+  &-element:nth-child(3):after
+      content: ''
+      position: absolute
+      left: 50%
+      top: -198px
+      transform: translateX(-50%)
+      width: 17px
+      height: 17px
+      border-radius: 50%
+      background: inherit
+
+
+  &-element:nth-child(4) &-container
+    top: -513px
+    background-color: #3e3d3d
+    color: #e4e4e4
+
+  &-element:nth-child(4):after
+    content: ''
+    position: absolute
+    left: 50%
+    top: -440px
+    transform: translateX(-50%)
+    width: 17px
+    height: 17px
+    border-radius: 50%
+    background: inherit
+
+  &-element:nth-child(odd) &-container
+    left: -493px
+
+  &-element:nth-child(odd) &-container:before
+    top: 8%
+    right: -16px
+    border-width: 8px 0 8px 16px
+    border-color: transparent #3e3d3d
+
+  &-element:nth-child(odd) &-container:after
+    top: 8%
+    right: -12px
+    border-width: 8px 0 8px 16px
+    border-color: transparent #ededed
+
+
+  &-element:nth-child(even) &-container:before
+    top: 8%
+    left: -16px
+    border-width: 8px 16px 8px 0
+    border-color: transparent #3e3d3d
+
+  &-element:nth-child(even) &-container:after
+    top: 8%
+    left: -12px
+    border-width: 8px 16px 8px 0
+    border-color: transparent #ededed
+
+  &-element:nth-child(4) &-container:after
+    display: none
+
+
+@media screen and (max-width: 954px)
+  .history-container
+    width: 250px
+
+  .history-element:nth-child(odd) .history-container
+    left: -335px
+
+@media screen and (max-width: 650px)
+  .history-element
+    margin-left: 20px
+
+  .history-container
+    width: calc(100vw - 126px)
+
+  .history-element:nth-child(odd) .history-container
+    left: 30px
+    top: 0
+
+  .history-element:nth-child(even) .history-container
+    top: 0
+
+  .history-element:nth-child(4) .history-container
+    top: 40px
+    padding-bottom: 30px
+
+
+  .history-element:nth-child(odd) .history-container:before
+    top: 8%
+    left: -16px
+    border-width: 8px 16px 8px 0
+    border-color: transparent #3e3d3d
+
+  .history-element:nth-child(odd) .history-container:after
+    top: 8%
+    left: -12px
+    border-width: 8px 16px 8px 0
+    border-color: transparent #ededed
+
+  .history-element:nth-child(even):after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 71px
+    transform: translateX(-50%)
+    width: 17px
+    height: 17px
+    border-radius: 50%
+    background: inherit
+
+  .history-element:nth-child(odd):after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 71px
+    transform: translateX(-50%)
+    width: 17px
+    height: 17px
+    border-radius: 50%
+    background: inherit
+
+  .history-element:nth-child(4):after
+    top: 113px
+
+  .history-year
+    left: 0

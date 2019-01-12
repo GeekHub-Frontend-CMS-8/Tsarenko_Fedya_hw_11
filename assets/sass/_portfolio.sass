@@ -3,37 +3,48 @@
 @import "mixins"
 
 .portfolio
-  padding: 125px 0
-  background: $secondary-bg-color
+  padding-top: 77px
+  text-align: center
 
-  &
-    .wrapper
-      text-align: center
-      h2
-        padding-bottom: 45px
+  &-title
+    color: #3e3d3d
+    font-family: $third-font
+    &:after
+      content: url("../img/black_wavy_line.png")
+      display: block
+      margin-top: 20px
 
-  &-container
-    +flex-content(space-between)
+  &-select-container
+    +flex-content(center)
+    margin-top: 52px
+
+  &-select
+    padding: 11px 22px
+    margin-right: 5px
+    border: 2px solid #3e3d3d
+    font:
+      size: 11px
+      family: $second-font
+      color: #3e3e3e
+    &:focus
+      color: #ffffff
+      background-color: #3e3d3d
+    @media (max-width: 768px)
+      padding: 11px
+
+.photoes
+  display: flex
+  justify-content: center
+  margin-top: 64px
+  @media (max-width: 768px)
     flex-wrap: wrap
 
-  &-item
-    +flex-content(center)
-    position: relative
-    align-items: center
-    margin-bottom: 30px
-    &:hover
-      box-shadow: 0 0 37px 12px rgba(0, 0, 0, 0.15)
-      transition: 0.6s
-    a
-     position: absolute
-     padding-left: 20px
-     padding-right: 20px
-     margin: 0
-     opacity: 0
-
-  &-item:hover a
-    opacity: 1
-    transition: 0.6s
-
-
-
+  &-container
+    display: flex
+    flex-direction: column
+    img
+      display: block
+      width: 100%
+      flex-grow: 1
+    @media (max-width: 768px)
+      flex-basis: 50%

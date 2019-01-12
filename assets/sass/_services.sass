@@ -3,38 +3,84 @@
 @import "mixins"
 
 .services
-  padding: 119px 0
-  background: $secondary-bg-color
-  font-family: $secondary-font
-
-  &-container
-    +flex-content(space-around)
-    align-items: baseline
-    flex-wrap: wrap
-
-  &-item
-    text-align: center
-    margin-top: 80px
-    max-width: 33%
-    width: 100%
+  padding: 69px 0 85px
+  text-align: center
+  background: url("../img/services-bg.png") no-repeat center/cover
+  
+  &-title
+    color: #fff
+    font-family: $third-font
+    &:after
+      content: url("../img/white_line.png")
+      display: block
+      margin-top: 20px
 
   &-paragraph
-    margin-top: 13px
-    color: $primary-color
-    font-size: 24px
-    font-weight: 500
+    color: #cfcfcf
 
-.title-h2
-  text-align: center
-  color: $primary-color
-  font-size: $font-size-h2
-  font-weight: 700
-  opacity: 0.8
+  &-main-container
+    +flex-content(space-around)
+    flex-wrap: wrap
+    margin-top: 77px
+    @media (max-width: 1150px)
+      justify-content: center
 
-  &::before
-    content: ''
-    display: block
-    margin: 0 auto 19px
-    max-width: 60px
-    height: 4px
-    background: $primary-color
+  &-container
+    position: relative
+    padding: 58px 33px 43px
+    margin-right: 30px
+    flex-basis: 17%
+    flex-grow: 1
+    border: 2px solid #898989
+    border-top: none
+    &:last-child
+      margin-right: 0
+    &:after,&:before
+      content: ''
+      position: absolute
+      display: block
+      top: 0
+      width: 110px
+      height: 2px
+      background-color: #898989
+      @media (max-width: 425px)
+        width: 75px
+    &:after
+      right: 0
+    &:before
+      left: 0
+    @media (max-width: 1150px)
+      margin-bottom: 30px
+      flex-grow: 0
+      flex-basis: 29%
+      &:nth-child(2n)
+        margin-right: 0
+    @media (max-width: 650px)
+      flex-basis: 50%
+      margin-right: 0
+      
+  &-info
+    line-height: 18px
+    color: #d8d8d8
+    font:
+      size: 13px
+      family: $second-font
+
+  &-paragraph
+    margin-top: 30px
+    line-height: 20px
+    color: #d8d8d8
+    font:
+      size: 14px
+      family: $first-font
+
+@each $icon in (Idea, Monitor, Combo, Wordpress)
+  .#{$icon}
+    position: absolute
+    left: 45%
+    top: -10px
+    margin: 0 auto
+    width: 27px
+    height: 25px
+    background: url("../img/#{$icon}.png") no-repeat center
+

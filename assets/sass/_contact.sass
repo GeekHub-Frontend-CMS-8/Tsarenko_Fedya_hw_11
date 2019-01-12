@@ -1,0 +1,132 @@
+@import "variables"
+
+@import "mixins"
+
+iframe
+  display: block
+
+.contact
+  padding: 0 0 38px
+  background: url("../img/footer_bg.png")
+
+  &-main-container
+    +flex-content(space-between)
+    margin-top: 43px
+    margin-bottom: 60px
+    @media (max-width: 650px)
+      flex-wrap: wrap
+
+  &-text-container
+    flex-basis: 33%
+    @media (max-width: 650px)
+      flex-basis: 100%
+      margin-bottom: 30px
+
+  &-address-container
+    margin-bottom: 31px
+
+  &-contacts-container
+    margin-bottom: 38px
+
+  &-paragraph
+    margin-bottom: 40px
+    color: #949494
+    font:
+      size: 14px
+      family: $first-font
+
+  &-studio
+    margin-bottom: 28px
+    color: #e3e3e3
+    font:
+      size: 13px
+      family: $second-font
+
+  &-address
+    padding-bottom: 5px
+    color: #949494
+    font:
+      size: 14px
+      style: italic
+      family:  $second-font
+
+  &-contacts
+    padding-bottom: 5px
+    text-transform: uppercase
+    color: #e3e3e3
+    font:
+      size: 13px
+      family: $second-font
+
+  .logo
+    padding-top: 51px
+    color: #ffffff
+
+  .social-items
+    a
+      color: #a4a4a4
+
+
+.form
+  +flex-content(space-between)
+  flex-basis: 63%
+  flex-wrap: wrap
+  align-items: flex-start
+  @media (max-width: 650px)
+    flex-basis: 100%
+
+  &-input
+   flex-basis: 41%
+   padding: 22px 24px
+   margin-bottom: 15px
+   border: 2px solid #464646
+   background-color: transparent
+   &::placeholder
+     color: #949494
+     font:
+       size: 14px
+       style: italic
+       family: $first-font
+   @media (max-width: 992px)
+     flex-basis: 100%
+
+  &-textarea
+    flex-basis: 100%
+    padding: 22px 24px
+    margin-bottom: 15px
+    height: 75px
+    border: 2px solid #464646
+    resize: none
+    background-color: transparent
+    &::placeholder
+      color: #949494
+      font:
+        size: 14px
+        style: italic
+        family: $first-font
+
+  &-button
+    padding: 14px 40px
+    border: none
+    background-color: #464646
+    color: #e3e3e3
+    font:
+      size: 13px
+      family: $second-font
+
+.footer-rights:before
+  content: ''
+  display: block
+  margin-bottom: 41px
+  height: 1px
+  width: 100%
+  background-color: #3e3e3e
+
+.copyright
+  color: #949494
+  font:
+    size: 14px
+    family: $first-font
+    style: italic
+
+

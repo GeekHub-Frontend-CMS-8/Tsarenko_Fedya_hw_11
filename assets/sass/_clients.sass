@@ -1,0 +1,28 @@
+@import "variables"
+
+@import "mixins"
+
+.clients
+  padding: 79px 0 126px
+  text-align: center
+
+  &-title
+    color: #3e3d3d
+    font-family: $third-font
+    &:after
+      content: url("../img/black_wavy_line.png")
+      display: block
+      margin-top: 20px
+
+  &-container
+    +flex-content(center)
+    align-items: baseline
+    margin-top: 81px
+
+  &-item
+    margin-right: 90px
+    img
+      display: block
+      width: 100%
+    &:last-child
+      margin-right: 0

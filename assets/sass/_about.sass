@@ -1,0 +1,105 @@
+@import "variables"
+
+@import "mixins"
+
+.about
+  padding: 73px 0 63px
+  text-align: center
+  background-color: #e3e3e3
+
+  &-main-container
+    background-color: #ffffff
+    padding-bottom: 50px
+
+  &-title
+    padding: 59px 0 0
+    color: #3e3d3d
+    font-family: $third-font
+    &:after
+      content: url("../img/black_wavy_line.png")
+      display: block
+      margin-top: 20px
+
+  &-paragraph
+    color: #3e3d3d
+    text-align: left
+
+  &-button
+    padding: 14px 35px
+    margin-top: 45px
+    margin-right: 2px
+    border: 2px solid #3e3d3d
+    font:
+      size: 13px
+      family: $second-font
+    background-color: #ffffff
+    &:focus
+      color: #ffffff
+      background-color: #3e3d3d
+    @media (max-width: 425px)
+      padding: 14px 20px
+
+.achieves
+  +flex-content(center)
+  margin-top: 36px
+  @media (max-width: 1100px)
+    flex-wrap: wrap
+
+  &-container
+    padding: 3px 100px 13px
+    border-right: 1px solid #b0b0b0
+    &:last-child
+      border-right: none
+    @media (max-width: 1100px)
+      flex-basis: 29%
+      padding: 3px 50px 13px
+      margin-bottom: 30px
+      &:nth-child(2n)
+        border-right: none
+    @media (max-width: 650px)
+      flex-basis: 50%
+      border-left: 1px solid #b0b0b0
+      &:nth-child(2n)
+        border-right: 1px solid #b0b0b0
+
+  &-info
+    padding-bottom: 7px
+    color: #3e3d3d
+    font:
+      size: 13px
+      family: $second-font
+
+  &-amount
+    margin-top: 21px
+    color: #3e3d3d
+    font:
+      size: 54px
+      family: $second-font
+
+@each $icon in (medal, checked, businessman, briefcase)
+  .#{$icon}
+    margin: 0 auto 21px
+    width: 40px
+    height: 50px
+    background: url("../img/#{$icon}.png") no-repeat center
+
+.text-container-title
+  font:
+    size: 20px
+
+
+.text-container-paragraph
+  margin-top: 41px
+  padding: 0 75px
+  line-height: 25px
+  font:
+    size: 14px
+    family: $first-font
+  @media (max-width: 768px)
+    padding: 0 30px
+
+.decoration
+  width: 100%
+  height: 325px
+  background: url("../img/about-us.png") no-repeat center/cover
+

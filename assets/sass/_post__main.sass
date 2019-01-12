@@ -1,0 +1,203 @@
+@import "variables"
+
+@import "mixins"
+
+.post
+  padding: 27px 0 128px
+  background-color: #e3e3e3
+
+  &-container
+    margin-top: 59px
+    flex-direction: column
+    display: flex
+    max-width: 821px
+    width: 100%
+    margin-right: 50px
+    @media (max-width: 800px)
+      max-width: 100%
+      margin-right: 0
+
+  &-img
+    width: 100%
+
+  &-caption
+    padding-top: 40px
+    color: #3e3d3d
+    font:
+      family: $second-font
+
+  &-date
+    padding-top: 14px
+    padding-bottom: 19px
+    color: #3e3d3d
+    font:
+      size: 14px
+      style: italic
+      family: $first-font
+
+  &-statistics-container
+    position: relative
+    +flex-content(flex-start)
+    padding: 9px 0
+    &:after, &:before
+      content: ''
+      position: absolute
+      display: block
+      height: 1px
+      width: 100%
+      background-color: #b7b7b7
+    &:before
+      top: 0
+    &:after
+      bottom: 0
+
+  &-statistics-item
+    margin-right: 12px
+    color: #818181
+    font:
+      size: 14px
+      style: italic
+      family: $first-font
+    img
+      margin-right: 9px
+
+  &-info
+    padding-top: 29px
+    line-height: 25px
+    color: #3e3d3d
+    font:
+      size: 14px
+      family: $first-font
+
+  &-cite
+    padding: 65px 51px
+    margin-top: 40px
+    line-height: 25px
+    color: #3e3d3d
+    font:
+      weight: 700
+      style: italic
+      family: $first-font
+    border: 2px solid #a8a8a8
+
+  &-social-container
+    position: relative
+    +flex-content(center)
+    align-items: center
+    padding: 21px 0
+    margin-top: 60px
+    margin-bottom: 66px
+    &:after, &:before
+      content: ''
+      position: absolute
+      display: block
+      width: 100%
+      height: 1px
+      background-color: #b7b7b7
+    &:after
+      bottom: 0
+    &:before
+      top: 0
+
+  &-social-item
+    +flex-content(center)
+    align-items: center
+    margin-right: 5px
+    width: 31px
+    height: 31px
+    border-radius: 50%
+    border: 1px solid #818181
+    a
+      color: #818181
+    &:hover a
+      transition: 0.3s ease
+      color: #ffffff
+    &:hover
+      transition: 0.3s ease
+      background-color: #818181
+
+  .wrapper
+    display: flex
+    @media (max-width: 800px)
+      flex-wrap: wrap
+
+  .form
+    flex-basis: 13%
+
+.post-title
+  margin-top: 91px
+  margin-bottom: 51px
+  color: #3e3d3d
+  font:
+    weight: bold
+    family: $second-font
+  &:first-of-type
+    margin-top: 0
+
+.post-comments-container
+  display: flex
+  img
+    width: 73px
+    height: 73px
+
+.comment
+  position: relative
+  margin-top: 37px
+  display: flex
+
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    display: block
+    width: 100%
+    height: 1px
+    background-color: #b7b7b7
+
+
+.text-container
+  display: flex
+  flex-direction: column
+  margin-left: 29px
+
+.name
+  padding-bottom: 8px
+  color: #3e3d3d
+  font:
+    size: 13px
+    family: $second-font
+    weight: bold
+
+.comment-date
+  padding-bottom: 31px
+  color: #3e3d3d
+  font:
+    size: 14px
+    style: italic
+    family: $first-font
+
+.comment-text
+  color: #3e3d3d
+  line-height: 18px
+  font:
+    size: 14px
+    family: $first-font
+
+.comment-reply
+  padding: 10px
+  margin-top: 36px
+  margin-left: auto
+  width: 100px
+  background-color: transparent
+  border: none
+  color: #3e3d3d
+  font:
+    size: 14px
+    style: italic
+    family: $first-font
+  &:hover
+    transition: .3s ease
+    color: #ffffff
+    background-color: #3e3d3d
+
+

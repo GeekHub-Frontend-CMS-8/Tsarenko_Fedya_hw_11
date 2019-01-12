@@ -1,0 +1,82 @@
+@import "variables"
+
+@import "mixins"
+
+.blog
+  padding-top: 83px
+  text-align: center
+  background-color: #e3e3e3
+
+  &-title
+    color: #3e3d3d
+    font-family: $third-font
+    &:after
+      content: url("../img/black_wavy_line.png")
+      display: block
+      margin-top: 20px
+
+  &-main-container
+    display: flex
+    margin-top: 78px
+    flex-wrap: wrap
+
+
+
+  &-container
+    display: flex
+    flex-direction: column
+    flex-basis: 25%
+    img
+      width: 100%
+      height: 50%
+      display: block
+      flex-grow: 1
+    @media (max-width: 1024px)
+      flex-basis: 50%
+    @media (max-width: 710px)
+      flex-basis: 100%
+      &:nth-child(2n)
+        flex-direction: column-reverse
+    @media (max-width: 425px)
+      img
+        height: auto
+
+
+
+  &-item
+    padding: 40px 42px 37px 30px
+    height: 50%
+    text-align: left
+    flex-grow: 1
+    background-color: #424244
+
+  &-date
+    color: #e3e3e3
+    font:
+      size: 12px
+      style: italic
+      family: $second-font
+    &:after
+      content: ''
+      display: block
+      background-color: #565656
+      max-width: 151px
+      width: 100%
+      height: 1px
+      margin-top: 11px
+
+  &-head
+    margin-top: 19px
+    color: #e3e3e3
+    text-transform: uppercase
+    font:
+      size: 13px
+      family: $second-font
+
+  &-paragraph
+    margin-top: 37px
+    line-height: 20px
+    color: #949494
+    font:
+      size: 14px
+      family: $first-font

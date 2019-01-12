@@ -1,0 +1,29 @@
+@import "variables"
+
+@import "mixins"
+
+.hero
+  padding: 112px 0 120px
+  text-align: center
+  background: url("../img/post-bg.png") no-repeat center/cover
+
+  &-title
+    color: #ffffff
+    font:
+      size: 36px
+      family: $third-font
+    &:after
+      content: url("../img/blog-title-underline.png")
+      display: block
+      margin-top: 20px
+    @media screen and (max-width: 425px)
+      font-size: 26px
+
+  .hero-direction
+    margin-top: 28px
+    color: #fff
+    a
+      color: #ffffff
+
+a
+  text-decoration: none

@@ -1,0 +1,91 @@
+@import "variables"
+
+@import "mixins"
+
+.blog
+  padding: 27px 0 128px
+  background-color: #e3e3e3
+
+  &-main-container
+    +flex-content(space-between)
+    @media (max-width: 1122px)
+      flex-wrap: wrap
+      justify-content: center
+
+
+  &-items-container
+    display: flex
+    flex-direction: column
+    flex-basis: 32%
+    @media (max-width: 1122px)
+      flex-basis: 60%
+
+  &-item
+    margin-top: 59px
+    @media (max-width: 1122px)
+      text-align: center
+
+  &-caption
+    padding-top: 40px
+    color: #3e3d3d
+    font:
+      family: $second-font
+
+  &-date
+    padding-top: 14px
+    padding-bottom: 19px
+    color: #3e3d3d
+    font:
+      size: 14px
+      style: italic
+      family: $first-font
+
+  &-statistics-container
+    position: relative
+    +flex-content(flex-start)
+    padding: 9px 0
+    &:after, &:before
+      content: ''
+      position: absolute
+      display: block
+      height: 1px
+      width: 100%
+      background-color: #b7b7b7
+    &:before
+      top: 0
+    &:after
+      bottom: 0
+
+  &-statistics-item
+    margin-right: 12px
+    color: #818181
+    font:
+      size: 14px
+      style: italic
+      family: $first-font
+    img
+      margin-right: 9px
+
+  &-info
+    padding-top: 29px
+    color: #3e3d3d
+    font:
+      size: 14px
+      family: $first-font
+
+  &-button
+    margin-top: 33px
+    padding: 14px 25px
+    border: 2px solid #3e3d3d
+    color: #3e3d3d
+    background-color: transparent
+    font:
+      size: 13px
+      family: $second-font
+    transition: .3s
+    &:hover
+      transition: .3s
+      color: #fff
+      background-color: #3e3d3d
+
+
